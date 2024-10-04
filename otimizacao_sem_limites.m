@@ -9,7 +9,7 @@ beq = 100;
 %Função objetivo e limite das variaveis
 funcao_objetivo = @(x) C1(x(1)) + C2(x(2));
 lb = [0; 0];
-ub = [40;60];
+ub = [];
 
 options = optimset('Display', 'iter'); % Exibe informações durante a otimização
 [x, fval] = fmincon(funcao_objetivo, [1; 99], [], [], Aeq, beq, lb, ub, [], options);
