@@ -2,7 +2,7 @@
 dt = 0.001;
 k = 1.2;
 tau = 0.1;
-tmax = 100.0;
+tmax = 10.0;
 %Definindo k1 e k2
 k1 = (k*dt/2*tau)/(1+(dt/2*tau));
 k2 = (1-dt/2*tau)/(1+(dt/2*tau));
@@ -24,3 +24,4 @@ for i = 0.001:dt:tmax
   tempo(contador) = dt*contador;
   contador = contador + 1;
 end
+plot(tempo,y)
